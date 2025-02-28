@@ -1,74 +1,113 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     background: #002339;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
 }
 
-.container{
-    margin: 12%;
+.container {
     width: 90%;
     max-width: 700px;
+    text-align: center;
+    margin: auto;
 }
 
-.display{
+.display {
     width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0;
     background: #fff;
     color: #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px 20px;
+    padding: 20px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
-.container h1{
+.container h1 {
     font-weight: 400;
-    font-size: 40px;
+    font-size: 2rem;
 }
 
-.container h1 span{
+.container h1 span {
     color: #019f55;
     border-bottom: 4px solid #019f55;
     padding-bottom: 5px;
 }
 
-.display img{
-    width: 30px;
+.display img {
+    width: 25px;
     cursor: pointer;
 }
 
-.display input{
+.display input {
     border: 0;
     outline: 0;
-    font-size: 20px;
-
+    font-size: 1.2rem;
+    flex: 1;
+    width: 100%;
+    background: transparent;
 }
 
-.container button img{
-    width: 28px;
-    margin-right: 10px;
+.container button img {
+    width: 24px;
+    margin-right: 8px;
 }
 
-.container  button{
+.container button {
     border: 0;
     outline: 0;
     background: #019f55;
     color: #fff;
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 1.2rem;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 16px 26px;
+    padding: 14px 24px;
     border-radius: 10px;
     cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
 }
 
+/* 🔹 Mobile Optimization */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .display {
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .display input {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .container button {
+        font-size: 1rem;
+        padding: 12px 20px;
+        max-width: 250px;
+    }
+}
